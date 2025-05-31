@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Vichaarmart Login</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to bottom right, #2c3e50, #3498db);
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+    .container {
+      background-color: rgba(0, 0, 0, 0.3);
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+      text-align: center;
+    }
+    input {
+      padding: 10px;
+      margin: 10px 0;
+      width: 100%;
+      border: none;
+      border-radius: 5px;
+    }
+    button {
+      padding: 10px;
+      background-color: #1abc9c;
+      border: none;
+      border-radius: 5px;
+      color: #fff;
+      width: 100%;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #16a085;
+    }
+    .logo {
+      width: 80px;
+      margin-bottom: 20px;
+    }
+    .gif {
+      width: 200px;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="assets/Over It Snow GIF by The Weather Channel.gif" class="gif" alt="Loading animation" />
+    <h1>Welcome to VichaarLab</h1>
+    <p>Secure login to continue</p>
+    <input type="text" placeholder="Username" id="username" />
+    <input type="password" placeholder="Password" id="password" />
+    <button onclick="login()">Login</button>
+  </div>
+</body>
+<script>
+  function login() {
+    const user = document.getElementById('username').value;
+    const pass = document.getElementById('password').value;
+    if (user && pass) {
+      console.log("Logged in as:", user);
+      alert("Welcome " + user + "!");
+    } else {
+      alert("Please fill in both fields.");
+    }
+  }
+</script>
+</html>
